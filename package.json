@@ -1,0 +1,32 @@
+{
+  "name": "@hexlet/code",
+  "version": "1.0.0",
+  "description": "[![hexlet-check](https://github.com/Artemgh001/backend-project-46/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/Artemgh001/backend-project-46/actions)",
+  "main": "index.js",
+  "type": "module",
+  "bin": {
+    "gendiff": "bin/gendiff.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Artemgh001/backend-project-46.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Artemgh001/backend-project-46/issues"
+  },
+  "homepage": "https://github.com/Artemgh001/backend-project-46#readme",
+  "dependencies": {
+    "commander": "^15.0.0",
+    "globals": "^17.13.0",
+    "lodash": "^4.18.1"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.12.0"
+  }
+}
