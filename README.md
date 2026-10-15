@@ -1,5 +1,5 @@
 # Вычислитель отличий (JS)
-
+[![show-directory](https://github.com/Artemgh001/backend-project-46/actions/workflows/check.yml/badge.svg)](https://github.com/Artemgh001/backend-project-46/actions/workflows/check.yml)
 [![hexlet-check](https://github.com/Artemgh001/backend-project-46/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/Artemgh001/backend-project-46/actions)
 
 Узнаете, как создавать cli приложения, парсить и форматировать данные в json, yaml. Научитесь проектировать архитектуру приложений. А также писать unit-тесты.

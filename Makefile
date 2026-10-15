@@ -2,3 +2,7 @@ install:
 	npm ci
 lint:
 	npx eslint .
+test:
+	npm test
+test-coverage:
+	npx vitest run --coverage
