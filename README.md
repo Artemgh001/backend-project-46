@@ -25,7 +25,9 @@ cd backend-project-46
 <!-- Добавьте примеры запуска и запись asciinema — именно это смотрит работодатель -->
 работа на 5 шаге: чтение файлов и их изменение: https://asciinema.org/a/fTae9NRTxqGWo328
 ---
-
+чтение файлов yml https://asciinema.org/a/MsdJMol2KG9DhCaU
+разные форматы sylish and plain https://asciinema.org/a/VGHPReHPA9w6GCFi
+формат json : https://asciinema.org/a/NPxrKuVmRFjO94ut
 <details>
 <summary>Автоматические тесты Хекслета</summary>
 
