@@ -11,7 +11,7 @@ export function plain(array, parentPath = "") {
   const newStr = array
     .map((elem) => {
       let acc = "";
-      let propertyPath = "";
+      let propertyPath;
       if (parentPath.length === 0) {
         propertyPath = elem.key;
       } else {

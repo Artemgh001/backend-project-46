@@ -1,7 +1,6 @@
 import gendiff from "../src/gendiffile.js";
 import readFiles from "../src/readfile.js";
 import stylish from "../src/formatters/stylish.js";
-import jsonFormat from "../src/formatters/json.js";
 import path from "path";
 import fs from "node:fs";
 import { fileURLToPath } from "node:url";
