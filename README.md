@@ -1,5 +1,6 @@
 # Вычислитель отличий (JS)
-[![show-directory](https://github.com/Artemgh001/backend-project-46/actions/workflows/check.yml/badge.svg)](https://github.com/Artemgh001/backend-project-46/actions/workflows/check.yml)
+
+[![my-check](https://github.com/Artemgh001/backend-project-46/actions/workflows/check.yml/badge.svg)](https://github.com/Artemgh001/backend-project-46/actions/workflows/check.yml)
 [![hexlet-check](https://github.com/Artemgh001/backend-project-46/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/Artemgh001/backend-project-46/actions)
 
 Узнаете, как создавать cli приложения, парсить и форматировать данные в json, yaml. Научитесь проектировать архитектуру приложений. А также писать unit-тесты.
@@ -23,8 +24,8 @@ make install
 
 ## Использование
 
-<!-- Добавьте примеры запуска и запись asciinema — именно это смотрит работодатель -->
----
+## <!-- Добавьте примеры запуска и запись asciinema — именно это смотрит работодатель -->
+
 1. Сравнение и вывод плоских файлов JSON: https://asciinema.org/a/fTae9NRTxqGWo328
 2. Чтение и вывод файлов yml/yaml: https://asciinema.org/a/MsdJMol2KG9DhCaU
 3. Вывод файлов в разных форматах: stylish и plain: https://asciinema.org/a/VGHPReHPA9w6GCFi
