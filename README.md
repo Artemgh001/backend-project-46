@@ -18,16 +18,17 @@
 ```bash
 git clone https://github.com/Artemgh001/backend-project-46.git
 cd backend-project-46
+make install
 ```
 
 ## Использование
 
 <!-- Добавьте примеры запуска и запись asciinema — именно это смотрит работодатель -->
-работа на 5 шаге: чтение файлов и их изменение: https://asciinema.org/a/fTae9NRTxqGWo328
 ---
-чтение файлов yml https://asciinema.org/a/MsdJMol2KG9DhCaU
-разные форматы sylish and plain https://asciinema.org/a/VGHPReHPA9w6GCFi
-формат json : https://asciinema.org/a/NPxrKuVmRFjO94ut
+1. Сравнение и вывод плоских файлов JSON: https://asciinema.org/a/fTae9NRTxqGWo328
+2. Чтение и вывод файлов yml/yaml: https://asciinema.org/a/MsdJMol2KG9DhCaU
+3. Вывод файлов в разных форматах: stylish и plain: https://asciinema.org/a/VGHPReHPA9w6GCFi
+4. Вывод файлов в формате json : https://asciinema.org/a/NPxrKuVmRFjO94ut
 <details>
 <summary>Автоматические тесты Хекслета</summary>
 

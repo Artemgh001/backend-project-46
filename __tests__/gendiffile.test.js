@@ -3,24 +3,25 @@ import readFiles from "../src/readfile.js";
 import stylish from "../src/formatters/stylish.js";
 import path from "path";
 import fs from "node:fs";
-import { fileURLToPath } from "node:url";
 import { expect, test } from "vitest";
 
-const meta = fileURLToPath(import.meta.url);
-const dirname = path.dirname(meta);
-const file1 = path.join(dirname, "../__fixtures__", "testfile1.json");
-const file2 = path.join(dirname, "../__fixtures__", "testfile2.json");
-const file3 = path.join(dirname, "../__fixtures__", "file3.js");
-const file4 = path.join(dirname, "../__fixtures__", "fileresult.txt");
-const file5 = path.join(dirname, "../__fixtures__", "fileresultjson.txt");
-const data = fs.readFileSync(file4, "utf8").replace(/\r\n/g, "\n");
-const data2 = fs.readFileSync(file5, "utf8").replace(/\r\n/g, "\n");
+const getFixturePath = (filename) =>
+  path.join(import.meta.dirname, "..", "__fixtures__", filename);
+const readFile = (filename) =>
+  fs.readFileSync(getFixturePath(filename), "utf-8").replace(/\r\n/g, "\n");
+
 test("gendiff", () => {
-  expect(gendiff(file1, file2, "stylish")).toBe(data);
+  expect(
+    gendiff(
+      getFixturePath("testfile1.json"),
+      getFixturePath("testfile2.json"),
+      "stylish",
+    ),
+  ).toBe(readFile("fileresult.txt"));
 });
 
 test("readfile", () => {
-  expect(() => readFiles(file3)).toThrowError(Error);
+  expect(() => readFiles(getFixturePath("file3.js"))).toThrow(Error);
 });
 
 test("stylish", () => {
@@ -30,5 +31,30 @@ test("stylish", () => {
 });
 
 test("json", () => {
-  expect(gendiff(file1, file2, "json")).toBe(data2);
+  expect(
+    gendiff(
+      getFixturePath("testfile1.json"),
+      getFixturePath("testfile2.json"),
+      "json",
+    ),
+  ).toBe(readFile("fileresultjson.txt"));
+});
+
+test("plain", () => {
+  expect(
+    gendiff(
+      getFixturePath("testfile1.json"),
+      getFixturePath("testfile2.json"),
+      "plain",
+    ),
+  ).toBe(readFile("fileresultplain.txt"));
+});
+
+test("yml", () => {
+  expect(
+    gendiff(
+      getFixturePath("filetestyml1.yml"),
+      getFixturePath("filetestyml2.yml"),
+    ),
+  ).toBe(readFile("fileresultyml.txt"));
 });
