@@ -1,20 +1,13 @@
 # Вычислитель отличий (JS)
 
-[![my-check](https://github.com/Artemgh001/backend-project-46/actions/workflows/check.yml/badge.svg)](https://github.com/Artemgh001/backend-project-46/actions/workflows/check.yml)
 [![hexlet-check](https://github.com/Artemgh001/backend-project-46/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/Artemgh001/backend-project-46/actions)
-
-Узнаете, как создавать cli приложения, парсить и форматировать данные в json, yaml. Научитесь проектировать архитектуру приложений. А также писать unit-тесты.
-
-Учебный проект Хекслета: https://ru.hexlet.io/programs/backend
-Как это должно работать: https://asciinema.org/a/Pe6QypnLEmFWssNAjCOJN1iii
+[![my-check](https://github.com/Artemgh001/backend-project-46/actions/workflows/check.yml/badge.svg)](https://github.com/Artemgh001/backend-project-46/actions/workflows/check.yml)
 
 ## Стек
 
 - JavaScript
 
 ## Установка
-
-<!-- Опишите установку: клонирование, зависимости, переменные окружения -->
 
 ```bash
 git clone https://github.com/Artemgh001/backend-project-46.git
@@ -23,8 +16,6 @@ make install
 ```
 
 ## Использование
-
-## <!-- Добавьте примеры запуска и запись asciinema — именно это смотрит работодатель -->
 
 1. Сравнение и вывод плоских файлов JSON: https://asciinema.org/a/fTae9NRTxqGWo328
 2. Чтение и вывод файлов yml/yaml: https://asciinema.org/a/MsdJMol2KG9DhCaU
