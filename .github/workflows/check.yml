@@ -5,5 +5,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
+      - name: Install dependencies
+        run: npm ci
+
       - run: make lint
       - run: make test
