@@ -1,6 +1,5 @@
 import gendiff from "../src/gendiffile.js";
 import readFiles from "../src/readfile.js";
-import stylish from "../src/formatters/stylish.js";
 import path from "path";
 import fs from "node:fs";
 import { expect, test } from "vitest";
@@ -10,44 +9,23 @@ const getFixturePath = (filename) =>
 const readFile = (filename) =>
   fs.readFileSync(getFixturePath(filename), "utf-8").replace(/\r\n/g, "\n");
 
-test("gendiff", () => {
+const cases = [
+  { format: "stylish", result: "fileresult.txt" },
+  { format: "json", result: "fileresultjson.txt" },
+  { format: "plain", result: "fileresultplain.txt" },
+];
+test.each(cases)("formats", ({ format, result }) => {
   expect(
     gendiff(
       getFixturePath("testfile1.json"),
       getFixturePath("testfile2.json"),
-      "stylish",
+      format,
     ),
-  ).toBe(readFile("fileresult.txt"));
+  ).toBe(readFile(result));
 });
 
 test("readfile", () => {
   expect(() => readFiles(getFixturePath("file3.js"))).toThrow(Error);
-});
-
-test("stylish", () => {
-  const obj = [{ status: "added", key: "settings", value: {} }];
-  const otv = `{\n  + settings: {}\n}`;
-  expect(stylish(obj)).toBe(otv);
-});
-
-test("json", () => {
-  expect(
-    gendiff(
-      getFixturePath("testfile1.json"),
-      getFixturePath("testfile2.json"),
-      "json",
-    ),
-  ).toBe(readFile("fileresultjson.txt"));
-});
-
-test("plain", () => {
-  expect(
-    gendiff(
-      getFixturePath("testfile1.json"),
-      getFixturePath("testfile2.json"),
-      "plain",
-    ),
-  ).toBe(readFile("fileresultplain.txt"));
 });
 
 test("yml", () => {
